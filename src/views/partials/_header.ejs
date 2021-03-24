@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://bootswatch.com/4/minty/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> 
+    <link rel="stylesheet" href="public/css/bootstrap-image-checkbox.css">      
+    <link rel="stylesheet" href="public/css/images.css">      
+    <script src="https://kit.fontawesome.com/9f4b4fa4bc.js" crossorigin="anonymous"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>Reminder App</title>
+</head>
+<body>
+    <!-- Image and text -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
+        <a class="navbar-brand" href="#">Remind<i class="far fa-clock mx-1"></i>Me</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <% if (user) { %>
+                    <button id="hiderButton" class="btn btn-primary">Esconder panel tareas</button>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Tareas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/profile">Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Salir</a>
+                    </li>
+                <% } else { %>   
+                <li class="nav-item">
+                    <a class="nav-link" href="/signup">Registrar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/signin">Ingresar</a>
+                </li>
+                <% } %>  
+            </ul>
+        </div>
+    </nav>

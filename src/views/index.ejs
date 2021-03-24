@@ -1,0 +1,51 @@
+<%- include ('partials/_header'); %>    
+<div class="container">
+        <div class="row">
+            <div id="effect" class="col-md-5">
+                <div class="card">
+                    <div class="card-body">
+                        <form calss="align-items-center" action="/add" method="POST">
+                            <h3>Agregar tarea</h3>
+                            <div class="form-group">
+                                <input type="text" name="title" placeholder="Titulo" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <textarea name="description" cols="80" class="form-control" placeholder="Inserta descripcion"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Agregar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Nro</th>
+                            <th>Título</th>
+                            <th>Descripcion</th>
+                            <th>Operaciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(var i=0; i< tasks.length; i++) { %>
+                            <tr>
+                                <td><%= i + 1 %></td>
+                                <td><%= tasks[i].title %></td>
+                                <td><%= tasks[i].description %></td>
+                                <td>
+                                    <form method="post" action="target.html" style="display: inline;">
+                                        <input type="hidden" name="name" value="value" /> 
+                                        <a onclick="this.parentNode.submit();" href="/done/<%= tasks[i]._id %>"><i class="fas fa-check-circle"></i></a>
+                                    </form>
+                                    <a href="/delete/<%= tasks[i]._id %>"><i class="fas fa-trash-alt"></i></a>
+                                    <a href="/edit/<%= tasks[i]._id %>"><i class="fas fa-edit"></i></a>
+                                </td>
+                            </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+</div>
+<%- include ('partials/_footer'); %>

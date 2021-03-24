@@ -1,0 +1,52 @@
+<%- include ('partials/_header'); %>
+<div class="container" id="box">
+    <section>
+        <h3>Hola <%= user.email %>, seleccioná tu fondo</h3>
+    
+        <article>
+            <div class="example">
+                <div class="example-preview source-code" data-hl="html">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="custom-control custom-radio image-checkbox">
+                                <input type="radio" class="custom-control-input" id="ck2a" name="ck2">
+                                <label class="custom-control-label" for="ck2a">
+                                    <img src="/public/img/annie-spratt.jpg" alt="#" class="img-fluid rounded">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="custom-control custom-radio image-checkbox">
+                                <input type="radio" class="custom-control-input" id="ck2b" name="ck2">
+                                <label class="custom-control-label" for="ck2b">
+                                    <img src="/public/img/luca-bravo.jpg" alt="#" class="img-fluid rounded">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="custom-control custom-radio image-checkbox">
+                                <input type="radio" class="custom-control-input" id="ck2c" name="ck2">
+                                <label class="custom-control-label" for="ck2c">
+                                    <img src="/public/img/muneeb-syed.jpg" alt="#" class="img-fluid rounded">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="custom-control custom-radio image-checkbox">
+                                <input type="radio" class="custom-control-input" id="ck2d" name="ck2">
+                                <label class="custom-control-label" for="ck2d">
+                                    <img src="/public/img/vladimir-kudinov.jpg" alt="#" class="img-fluid rounded">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <button onclick="actualizarFondo();">Actualizar</button>
+    </section>
+</div>
+
+
+
+<%- include ('partials/_footer'); %>
