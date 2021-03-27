@@ -14,8 +14,8 @@ const flash = require('connect-flash');
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-            user: 'mauriciomastonon@gmail.com',   //put your mail here
-            pass: 'Mm4626076'              //password here
+            user: 'yourmail@gmail.com',   //put your mail here
+            pass: 'yourpass'              //password here
           }
  });
 
